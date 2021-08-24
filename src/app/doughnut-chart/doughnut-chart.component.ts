@@ -30,19 +30,20 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
     let overrides: ChartOptions;
     if (this.selectedTheme === 'dark-theme') {
       overrides = {
-        legend: {
-          labels: { fontColor: 'white' }
-        },
-        scales: {
-          xAxes: [{
-            ticks: { fontColor: 'white' },
-            gridLines: { color: 'rgba(255,255,255,0.1)' }
-          }],
-          yAxes: [{
-            ticks: { fontColor: 'white' },
-            gridLines: { color: 'rgba(255,255,255,0.1)' }
-          }]
-        }
+        // legend: {
+        //   labels: { fontColor: 'white' }
+        // },
+
+        // scales: {
+        //   xAxes: [{
+        //     ticks: { fontColor: 'white' },
+        //     gridLines: { color: 'rgba(255,255,255,0.1)' }
+        //   }],
+        //   yAxe: [{
+        //     ticks: { fontColor: 'white' },
+        //     gridLines: { color: 'rgba(255,255,255,0.1)' }
+        //   }]
+        // }
       };
     } else {
       overrides = {};
@@ -104,14 +105,16 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
   doughnutChartOptions: ChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    legend: {
-      display: true,
-      labels: {
-        fontColor: 'black'
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          // fontColor: 'black'
+        }
       }
     },
-    cutoutPercentage: 75,
-    defaultColor: ['green', 'blue']
+    // cutoutPercentage: 75,
+    // defaultColor: ['green', 'blue']
 
   };
 
