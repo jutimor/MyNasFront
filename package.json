@@ -28,7 +28,7 @@
     "@angular/router": "~10.2.4",
     "angular2-websocket": "^0.9.8",
     "chart.js": "^2.9.3",
-    "ng2-charts": "^2.3.0",
+    "ng2-charts": "^2.4.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
