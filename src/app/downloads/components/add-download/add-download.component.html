@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Ajouter</h1>
+<div mat-dialog-content>
+    <form>
+        <mat-form-field appearance="standard" class="simpleinput">
+            <mat-label>Adresse</mat-label>
+            <input matInput placeholder="link to download" name="linkToDownload" [(ngModel)]="data.link">
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="simpleinput">
+            <mat-label>Nom Final</mat-label>
+            <input matInput placeholder="link to download" name="finalFileName" [(ngModel)]="data.finalFileName">
+        </mat-form-field>
+
+        <mat-checkbox name="unrar" [(ngModel)]="data.unrar">Décompresser</mat-checkbox>
+        <mat-form-field appearance="standard" class="simpleinput">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput placeholder="link to download" name="unrarPassword" [(ngModel)]="data.unrarPassword"
+                [disabled]="data.unrar ? null : 'true'">
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data">Download</button>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

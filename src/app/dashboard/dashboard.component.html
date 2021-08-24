@@ -1,0 +1,53 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{'RAM'}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div style="display: block">
+            <app-doughnut-chart [data]="ramStat" [labelLegend]="ramLabels"></app-doughnut-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{'Cpu'}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div style="display: block">
+            <p>{{cpu.cpuName}}</p>
+            <p>Cpu Usage :
+              <mat-progress-bar mode="determinate" value="{{cpu.cpuUsage}}"></mat-progress-bar>
+            </p>
+
+            <p>UpTime : {{system.upTime}}</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
