@@ -48,7 +48,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Download build
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2.0.10
         with:
           name: deploy_dist
       - name: Deploy to GitHub Pages
