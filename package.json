@@ -26,7 +26,6 @@
     "@angular/platform-browser": "~10.2.4",
     "@angular/platform-browser-dynamic": "~10.2.4",
     "@angular/router": "~10.2.4",
-    "angular2-websocket": "^0.9.8",
     "chart.js": "^3.5.1",
     "ng2-charts": "^2.3.0",
     "rxjs": "~6.6.0",
