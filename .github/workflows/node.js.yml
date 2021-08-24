@@ -31,13 +31,13 @@ jobs:
     - run: npm test
     - name: Archive build
       if: success()
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2.2.4
       with:
         name: deploy_dist
         path: dist
       # - name: Archive code coverage result
       #   if: success()
-      #   uses: actions/upload-artifact@v1
+      #   uses: actions/upload-artifact@v2.2.4
       #   with:
       #     name: deploy_coverage
       #     path: coverage
