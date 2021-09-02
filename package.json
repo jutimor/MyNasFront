@@ -37,7 +37,7 @@
     "@angular/cli": "^12.2.3",
     "@angular/compiler-cli": "~12.2.2",
     "@types/chart.js": "^2.9.28",
-    "@types/jasmine": "~3.8.2",
+    "@types/jasmine": "~3.9.0",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^16.7.4",
     "codelyzer": "^6.0.2",
