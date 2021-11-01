@@ -13,7 +13,8 @@ export class DownloadsComponent implements OnInit {
   displayedColumns: string[] = ['identifiant', 'uri', 'status', 'vitesse', 'avancement', 'termine', 'total', 'actions'];
   dataSource = [];
 
-  constructor(private downloadService: DownloaderService,
+  constructor(
+    private downloadService: DownloaderService,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -23,9 +24,10 @@ export class DownloadsComponent implements OnInit {
     // }, 1000);
   }
 
-  getFile(uri) {
-    var tab = uri.split('/');
-    var name = tab[tab.length - 1];
+
+  getFile(uri): string {
+    const tab = uri.split('/');
+    let name = tab[tab.length - 1];
     if (name.length > 30) {
       name = name.substring(0, 27) + '...';
     }
