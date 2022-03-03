@@ -35,7 +35,7 @@ jobs:
     - run: npm test
     - name: Archive build
       if: success()
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v3
       with:
         name: deploy_dist
         path: dist
@@ -43,7 +43,7 @@ jobs:
     - uses: codecov/codecov-action@v2
       # - name: Archive code coverage result
       #   if: success()
-      #   uses: actions/upload-artifact@v2.2.4
+      #   uses: actions/upload-artifact@v3
       #   with:
       #     name: deploy_coverage
       #     path: coverage
