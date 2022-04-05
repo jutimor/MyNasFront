@@ -40,7 +40,7 @@ jobs:
         name: deploy_dist
         path: dist
     - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v2
+    - uses: codecov/codecov-action@v3
       # - name: Archive code coverage result
       #   if: success()
       #   uses: actions/upload-artifact@v2.2.4
